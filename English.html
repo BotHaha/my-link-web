@@ -10,6 +10,19 @@
 				margin-top: 0;       /* 去掉預設上邊距 */
 				padding-top: 10px;   /* 可微調距離頂端 */
 			}
+			.top-background {
+				height: 200px;
+				background-image: url('images/background_english.png'); /* 放你的圖片路徑 */
+				background-size: cover;      /* 讓圖片鋪滿整塊區域 */
+				background-position: center; /* 置中圖片 */
+				display: flex;
+				justify-content: center;     /* 水平置中 */
+				align-items: center;         /* 垂直置中 */
+				color: white;
+				font-size: 60px;
+				font-weight: bold;
+				text-shadow: 2px 2px 5px rgba(0,0,0,0.5); /* 讓文字更清楚 */
+			}
 			.footer-buttons {
 				position: fixed;
 				justify-content: center;
@@ -61,18 +74,23 @@
 			}
 		  </style>
 	<body>
-		<h1>English</h1>
+		<div class="top-background">
+			ENGLISH
+		</div>
         <div class="container">
 			<div class="left">
-                <h2>short sentences</h2>
+                <h2>Video Resources</h2>
+				<a class="link-button" href="https://tw.voicetube.com/" target="_blank">VoiceTube</a><br>
                 <a class="link-button" href="https://www.youtube.com/watch?v=5yjf1RvhflI&list=WL&index=1&pp=gAQBiAQB" target="_blank">常用1000句</a><br>
+				
 			</div>
 			<div class="center">
-                <h2>雜誌</h2>
+                <h2>Magazine</h2>
                 <a class="link-button" href="https://magazine.english4u.net/Magdata/menu/ljkng" target="_blank">No.305 3月 4U</a><br>
+				<a class="link-button" href="https://magazine.english4u.net/Magdata/menu/hb0gp" target="_blank">No.306 4月 4U</a><br>
 			</div>
 			<div class="right">
-                <h2>原文內容</h2>
+                <h2>Original Content</h2>
                 <a class="link-button" href="https://mangadex.org/" target="_blank">MangaDex</a><br>
                 <a class="link-button" href="https://witchculttranslation.com/" target="_blank">Witch Cult Translations</a><br>
 			</div>
