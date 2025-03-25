@@ -1,0 +1,107 @@
+<html lang="zh-Hant">
+    <head>
+        <meta charset="utf-8"/>
+        <title>登入帳號</title>
+        <style>
+            h1 {
+				text-align: center;  /* 水平置中 */
+				font-size: 50px; /*字體大小*/
+				margin-top: 0;       /* 去掉預設上邊距 */
+				padding-top: 10px;   /* 可微調距離頂端 */
+			}
+            .frame {
+                display: flex;
+                flex-direction: column;
+                justify-content: center; /* 垂直置中 */
+                align-items: center;     /* 水平置中 */
+                height: 100vh;           /* 滿版高度 */
+                font-size: 24px;         /* 整體文字大小放大 */
+            }
+            .password {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .password input {
+                width: 300px;
+                height: 60px;
+                font-size: 24px;
+                text-align: center;
+                border: 2px solid #888;
+                border-radius: 8px;
+                margin-top: 10px;
+            }
+
+            .submit {
+                width: 200px;
+                font-size: 28px;
+                padding: 15px 20px;
+                margin-top: 30px;
+                cursor: pointer;
+            }
+            .bottom-button {
+				padding: 20px 40px;
+				font-size: 30px; /*字體大小*/
+				background-color: #4CAF50;/*按鈕填充顏色*/
+				color: white; /*字體顏色*/
+				border: 2px solid black;/*邊框顏色*/
+				border-radius: 5px;/*邊框寬度*/
+			}
+            .bottom-button:hover {
+				transform: scale(1.1); /* 滑過去時放大 */
+				background-color: #38923d; /* 顏色變深一點 */
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 加陰影 */
+				transition: all 0.2s ease; /* 動畫滑順 */
+			}
+            .footer-buttons {
+				position: fixed;
+				display: flex;
+				justify-content: center;/* 水平置中 */
+				align-items: center;     /* 垂直置中 */
+				bottom: 20px; /* 距離底部 20px */
+				left: 0;
+				width: 100%;
+
+				padding: 10px 20px;
+				background-color: #b3bdb3;
+				border: none;
+				border-radius: 5px;
+			}
+            #error {
+                color: red;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Login</h1>
+        <div class="frame">       
+            <div class="password">
+                <label style="font-size:40px" for="password">Password</label>
+                <input type="password" id="password" placeholder="輸入密碼">
+            </div>
+            
+            <button class="submit" onclick="checkPassword()">登入</button>
+            <div id="error"></div>
+        </div>
+        
+        <div class="footer-buttons">
+            <button class="bottom-button" onclick="location.href='index.html'">back</button>
+        </div>
+        <script>
+            function checkPassword() {
+              const input = document.getElementById("password").value;
+              const correctPassword = "1234"; // 你可以改成你要的密碼
+        
+              if (input === correctPassword) {
+                window.location.href = "Japanese.html";
+              } else {
+                document.getElementById("error").innerText = "密碼錯誤，請再試一次！";
+              }
+            }
+          </script>
+    </body>
+</html>
