@@ -3,12 +3,31 @@
         <meta charset="UTF-8">
         <title>introduction</title>
         <style>
-            h1{
-                text-align:center;
-                font-size:50px;
-                margin-top:0;
-                padding-top:10px;
-                
+            .top-background {
+				height: 200px;
+				background-image: url('images/background_introduction.jpg'); /* 放你的圖片路徑 */
+				background-size: cover;      /* 讓圖片鋪滿整塊區域 */
+				background-position: center; /* 置中圖片 */
+				display: flex;
+				justify-content: center;     /* 水平置中 */
+				align-items: center;         /* 垂直置中 */
+				
+				font-size: 60px;
+				font-weight: bold;
+				text-shadow: 2px 2px 5px rgba(0,0,0,0.5); /* 讓文字更清楚 */
+			}
+            .frame {
+                display: flex;
+                flex-direction: column;
+                align-items: center;     /* 水平置中 */
+                height: 100vh;           /* 滿版高度 */
+                font-size: 24px;         /* 整體文字大小放大 */
+            }
+            .submit {
+                font-size: 20px;
+                padding: 15px 20px;
+                margin-top: 30px;
+                cursor: pointer;
             }
             .footer-buttons {
                 position: fixed;
@@ -37,17 +56,39 @@
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 加陰影 */
                 transition: all 0.2s ease; /* 動畫滑順 */
             }
+            .lang {
+                display: none;
+            }
+            .lang.active {
+                display: block;
+            }
         </style>
     </head>
     <body>
-        <h1>Introduction</h1>
-        <p>這是一個測試網站，裡面放了我個人常用到的網站連結，</p>
-        <p>利用github將寫好的前端放上網路，只要拿到網站連結都可以開啟。</p>
-        <p>This is a test website,there put my often used web link,</p>
-        <p>use github to put the written front-end on the internet,</p>
-        <p>and you cna open it as long as you get the website link.</p>
+        <div class="top-background">
+			Introduction
+		</div>
+        
+        <div class="frame">
+            <button class="submit" onclick="toggleLanguage()">zh⟷en</button>
+            <div class="lang lang-zh">
+                <p>這是一個測試網站，裡面放了我個人常用到的網站連結，</p>
+                <p>利用github將寫好的前端放上網路，只要拿到網站連結都可以開啟。</p>
+            </div>
+            <div class="lang lang-en">
+                <p>This is a test website,there put my often used web link,</p>
+                <p>use github to put the written front-end on the internet,</p>
+                <p>and you cna open it as long as you get the website link.</p>
+            </div>
+            
+            
+        </div>
+        
         <div class="footer-buttons">
             <button class="bottom-button" onclick="location.href='index.html'">back</button>
+            
         </div>
+
+        <script src="script.js"></script>
     </body>
 </html>
