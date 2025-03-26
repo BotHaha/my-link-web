@@ -1,4 +1,23 @@
-let currentLang = 'zh'; // 預設中文
+// 功能選單切換
+function toggleMenu() {
+  const menu = document.getElementById("dropdown-content");
+  if (menu) {
+    menu.classList.toggle("show");
+  }
+}
+
+// 點擊非按鈕時關閉選單
+document.addEventListener("click", function (event) {
+  const isDropdownBtn = event.target.matches(".dropbtn");
+  const dropdown = document.getElementById("dropdown-content");
+
+  if (!isDropdownBtn && dropdown && dropdown.classList.contains("show")) {
+    dropdown.classList.remove("show");
+  }
+});
+
+// 語言切換
+let currentLang = 'zh';
 
 function toggleLanguage() {
   const langs = document.querySelectorAll('.lang');
@@ -12,16 +31,30 @@ function toggleLanguage() {
     currentLang = 'zh';
   }
 
-  // 可選：改變按鈕文字
   const btn = document.getElementById("lang-toggle");
-  btn.innerText = currentLang === 'zh' ? "切換語言" : "Switch Language";
+  if (btn) {
+    btn.innerText = currentLang === 'zh' ? "切換語言" : "Switch Language";
+  }
 }
 
-// 初始顯示中文（等網頁載入完再做）
-window.onload = function () {
-  document.querySelector('.lang-zh').classList.add('active');
-};
+window.addEventListener("load", function () {
+  const zhBlock = document.querySelector('.lang-zh');
+  if (zhBlock) zhBlock.classList.add('active');
 
-document.getElementById("colorBtn").addEventListener("click", function () {
-    alert("你點到我了！");
-  });
+  const colorBtn = document.getElementById("colorBtn");
+  if (colorBtn) {
+    colorBtn.addEventListener("click", function () {
+      alert("你點到我了！");
+    });
+  }
+});
+
+// ✅ 點其他地方收起下拉選單
+window.addEventListener("click", function (event) {
+  if (!event.target.matches('.dropbtn')) {
+    const dropdowns = document.getElementsByClassName("dropdown-content");
+    for (let i = 0; i < dropdowns.length; i++) {
+      dropdowns[i].classList.remove("show");
+    }
+  }
+});
