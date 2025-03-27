@@ -11,29 +11,55 @@
 				margin-top: 0;       /* 去掉預設上邊距 */
 				padding-top: 10px;   /* 可微調距離頂端 */
 			}
-
 			.container {
 				display: flex;
-				height: 100vh; /* 滿版高度 */
+				justify-content: space-between;
+				padding: 40px;
+				gap: 30px; /* 👈 每欄之間的間距 */
+				height: 100vh;
+				box-sizing: border-box;
 			}
 
-			/* 各欄寬度比例，可自由調整 */
-			.left {
-				padding: 20px;
+			/* 各欄寬度（30%） */
+			.left, .center, .right {
+				width: 30%;
 				text-align: center;
-				width: 25%; /* 左邊 25% */
+				display: flex;
+				flex-direction: column;
+				align-items: center;
 			}
 
-			.center {
-				padding: 20px;
+			/* 區塊標題 */
+			.container h2 {
+				font-size: 24px;
+				font-weight: bold;
+				margin-bottom: 20px;
+				padding-bottom: 10px;
+				color: #222; /* 👈 深色標題 */
+				border-bottom: 3px solid #4CAF50;
+				width: 100%;
 				text-align: center;
-				width: 50%; /* 中間 50% */
 			}
 
-			.right {
-				padding: 20px;
-				text-align: center;
-				width: 25%; /* 右邊 25% */
+			/* 連結按鈕樣式 */
+			.link-button {
+				display: block;
+				width: 100%;
+				padding: 12px 20px;
+				margin: 1px 0;
+				background-color: #e0e0e0; /* 👈 淺色背景 */
+				color: #333;
+				text-decoration: none;
+				border-radius: 8px;
+				font-size: 16px;
+				font-weight: 500;
+				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+				transition: transform 0.2s, background-color 0.2s;
+			}
+
+			.link-button:hover {
+				background-color: #d5d5d5;
+				transform: scale(1.03);
 			}
 
 		</style>
