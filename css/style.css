@@ -18,6 +18,17 @@ body {
     text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 
+.body-background {
+    height:100vh;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px 0;
+    background-color: rgba(110, 106, 106, 0.5); /* 黑色透明遮罩 */
+    background-blend-mode: overlay;
+    color: white; /* 讓文字變白色好看 */
+  }
 
 .navbar {
     background-color: #333;
