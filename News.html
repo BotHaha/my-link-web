@@ -11,12 +11,15 @@
 				margin-top: 0;       /* 去掉預設上邊距 */
 				padding-top: 10px;   /* 可微調距離頂端 */
 			}
+			.section-group {
+				margin: 40px 0;
+				padding: 0 20px;
+			}
 			.container {
 				display: flex;
 				justify-content: space-between;
 				padding: 40px;
 				gap: 30px; /* 👈 每欄之間的間距 */
-				height: 100vh;
 				box-sizing: border-box;
 			}
 
@@ -81,22 +84,25 @@
 			<a href="introduction.html">Intro</a>
 			
 		</div>
-		<div class="container">
-			<div class="left">
-				<h2>UK</h2>
-				<a class="link-button" href="https://www.bbc.com/news" target="_blank">BBC</a><br>
+		<div class="section-group">
+			<!-- 第一排 -->
+			<div class="container">
+				<div class="left">
+					<h2>UK</h2>
+					<a class="link-button" href="https://www.bbc.com/news" target="_blank">BBC</a><br>
+				</div>
+				<div class="center">
+					<h2>US</h2>
+					<a class="link-button" href="https://www.cnn.com/" target="_blank">CNN</a><br>
+					<a class="link-button" href="https://www.nytimes.com/" target="_blank">The New York Times</a><br>
+				</div>
+				<div class="right">
+					<h2>JP</h2>
+					<a class="link-button" href="https://www.asahi.com/ajw/" target="_blank">Asahi Shimbun</a><br>
+				</div>
 			</div>
-			<div class="center">
-				<h2>US</h2>
-				<a class="link-button" href="https://www.cnn.com/" target="_blank">CNN</a><br>
-				<a class="link-button" href="https://www.nytimes.com/" target="_blank">The New York Times</a><br>
-			</div>
-			<div class="right">
-				<h2>JP</h2>
-				<a class="link-button" href="https://www.asahi.com/ajw/" target="_blank">Asahi Shimbun</a><br>
-			</div>
+			<!-- 第二排 -->
 		</div>
-
 
 
 
