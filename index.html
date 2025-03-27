@@ -3,86 +3,131 @@
   <meta charset="UTF-8">
   <title>連結</title>
   <style>
+	.app-section {
+		margin: 40px 0;
+		padding: 0 20px;
+	}
 
-    .container {
-      display: flex;
-      height: 500px;
-    }
+	.section-title {
+		font-size: 36px;
+		font-weight: 700;
+		color: #222;
+		border-left: 8px solid #4CAF50;
+		padding-left: 16px;
+		margin-bottom: 20px;
+		background-color: #f5f5f5;
+		display: inline-block;
+		border-radius: 4px;
+	}
 
-    .left, .right {
-      padding: 20px;
-      text-align: center;
-      width: 50%;
-    }
+	.grid-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+		gap: 30px;
+		padding: 40px;
+		justify-items: center;
+	}
 
-    .introduction-background {
-      height: 500px;
-      background-image: url('images/arrow.jpg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      font-size: 36px;
-      font-weight: bold;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-    }
+	.app-box {
+		width: 150px;
+		height: 150px;
+		background-size: cover;
+		background-position: center;
+		border-radius: 40px; /*增加APP圖片圓角*/
+		position: relative;
+		box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+		text-decoration: none;
+		overflow: hidden;
+		transition: transform 0.2s;
+	}
 
-    .introduction-button {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      font-size: 26px;
-      background-color: #000000;
-      color: white;
-    }
+	.app-box:hover {
+		transform: scale(1.05);
+	}
+
+	.app-label {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		background: rgba(0,0,0,0.6);
+		color: white;
+		text-align: center;
+		padding: 8px;
+		font-size: 18px;
+		font-weight: bold;
+	}
 
   </style>
    
   <link rel="stylesheet" href="css/style.css" /> 
 </head>
-<body>
-  	<div class="top-background" style="background-image: url('images/background_cloud.jpg');">
-		WELCOME
-	</div>
-	<div class="navbar">
-		<a href="index.html">Home</a>
-		<div class="dropdown">
-		  <button class="dropbtn"  onclick="toggleMenu()">Function ▼</button>
-		  <div id="dropdown-content" class="dropdown-content">
-			<a href="feature1.html">F1</a>
-			<a href="feature2.html">F2</a>
-			<a href="feature3.html">F3</a>
-		  </div>
+	<body>
+		<div class="top-background" style="background-image: url('images/background_cloud.jpg');">
+			WELCOME
 		</div>
-		<a href="introduction.html">Intro</a>
-		
-	</div>
-  
-
-  <div class="container">
+		<div class="navbar">
+			<a href="index.html">Home</a>
+			<div class="dropdown">
+			<button class="dropbtn"  onclick="toggleMenu()">Function ▼</button>
+			<div id="dropdown-content" class="dropdown-content">
+				<a href="feature1.html">F1</a>
+				<a href="feature2.html">F2</a>
+				<a href="feature3.html">F3</a>
+			</div>
+			</div>
+			<a href="introduction.html">Intro</a>
+			
+		</div>
 	
-    <div class="left">
-      <div class="introduction-background">
-        <button class="introduction-button" onclick="location.href='https://quizlet.com/latest'">Quizlet</button>
-      </div>
-    </div>
+		<div class="app-section">
+			<h2 class="section-title">常用</h2>
+			<div class="grid-container">
+				<a class="app-box" href="https://quizlet.com/latest" style="background-image: url('app-images/Quizlet.jpg');">
+					<div class="app-label">Quizlet</div>
+				</a>
+				
+				<a class="app-box" href="https://hungry-pancreas-bd3.notion.site/NFU-408944f6556a449194a74a576965dff7?pvs=4" style="background-image: url('app-images/Notion.jpg');">
+					<div class="app-label">Notion</div>
+				</a>
 
-    <div class="right">
-      <div class="introduction-background">
-        <button class="introduction-button" onclick="location.href='https://hungry-pancreas-bd3.notion.site/NFU-408944f6556a449194a74a576965dff7?pvs=4'">Notion</button>
-      </div>
-    </div>
-  </div>
+				<a class="app-box" href="https://chatgpt.com/" style="background-image: url('app-images/Chatgpt.jpg');">
+					<div class="app-label">Chatgpt</div>
+				</a>
 
-  <div class="footer-buttons">
-    <button class="bottom-button" onclick="location.href='News.html'">News</button>
-    <button class="bottom-button" onclick="location.href='English.html'">English</button>
-    <button class="bottom-button" onclick="location.href='login.html'">JP</button>
-  </div>
+				<a class="app-box" href="https://github.com/BotHaha" style="background-image: url('app-images/GitHub.jpg');">
+					<div class="app-label">GitHub</div>
+				</a>
+				
+			</div>
+		</div>
+		<div class="app-section">
+			<h2 class="section-title">學校</h2>
+			<div class="grid-container">
+				<a class="app-box" href="https://www.nfu.edu.tw/en/" style="background-image: url('app-images/nfu.jpg');">
+					<div class="app-label">NFU</div>
+				</a>
+				
+				<a class="app-box" href="https://ulearn.nfu.edu.tw/#/" style="background-image: url('app-images/nfu-ulearn.jpg');">
+					<div class="app-label">NFU-ulearn</div>
+				</a>
 
-  <script src="script.js"></script>
-</body>
+				<a class="app-box" href="https://ecare.nfu.edu.tw/" style="background-image: url('app-images/nfu-ecare.jpg');">
+					<div class="app-label">NFU-ecare</Nfu-ecare></div>
+				</a>
+
+				<a class="app-box" href="https://mail.nfu.edu.tw/" style="background-image: url('app-images/nfu-mail.jpg');">
+					<div class="app-label">NFU-mail</NFU-mail></div>
+				</a>
+				
+			</div>
+		</div>
+
+		<div class="footer-buttons">
+			<button class="bottom-button" onclick="location.href='News.html'">News</button>
+			<button class="bottom-button" onclick="location.href='English.html'">English</button>
+			<button class="bottom-button" onclick="location.href='login.html'">JP</button>
+		</div>
+
+	<script src="script.js"></script>
+	</body>
 </html>

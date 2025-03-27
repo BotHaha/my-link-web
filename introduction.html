@@ -3,19 +3,7 @@
         <meta charset="UTF-8">
         <title>introduction</title>
         <style>
-            .top-background {
-				height: 200px;
-				background-image: url('images/background_introduction.jpg'); /* 放你的圖片路徑 */
-				background-size: cover;      /* 讓圖片鋪滿整塊區域 */
-				background-position: center; /* 置中圖片 */
-				display: flex;
-				justify-content: center;     /* 水平置中 */
-				align-items: center;         /* 垂直置中 */
-				
-				font-size: 60px;
-				font-weight: bold;
-				text-shadow: 2px 2px 5px rgba(0,0,0,0.5); /* 讓文字更清楚 */
-			}
+
             .frame {
                 display: flex;
                 flex-direction: column;
@@ -29,33 +17,7 @@
                 margin-top: 30px;
                 cursor: pointer;
             }
-            .footer-buttons {
-                position: fixed;
-                display: flex;
-                justify-content: center;/* 水平置中 */
-                align-items: center;     /* 垂直置中 */
-                bottom: 20px; /* 距離底部 20px */
-                left: 0;
-                width: 100%;
-                padding: 10px 20px;
-                background-color: #b3bdb3;
-                border: none;
-                border-radius: 5px;
-            }
-            .bottom-button {
-                padding: 20px 40px;
-                font-size: 30px; /*字體大小*/
-                background-color: #4CAF50;/*按鈕填充顏色*/
-                color: white; /*字體顏色*/
-                border: 2px solid black;/*邊框顏色*/
-                border-radius: 5px;/*邊框寬度*/
-            }
-            .bottom-button:hover {
-                transform: scale(1.1); /* 滑過去時放大 */
-                background-color: #38923d; /* 顏色變深一點 */
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 加陰影 */
-                transition: all 0.2s ease; /* 動畫滑順 */
-            }
+
             .lang {
                 display: none;
             }
@@ -63,9 +25,10 @@
                 display: block;
             }
         </style>
+        <link rel="stylesheet" href="css/style.css" /> 
     </head>
     <body>
-        <div class="top-background">
+        <div class="top-background" style="background-image: url('images/background_introduction.jpg');">
 			Introduction
 		</div>
         
