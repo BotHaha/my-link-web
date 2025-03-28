@@ -78,9 +78,10 @@
 			<div class="dropdown">
 			  <button class="dropbtn"  onclick="toggleMenu()">Function ▼</button>
 			  <div id="dropdown-content" class="dropdown-content">
-				<a href="feature1.html">F1</a>
-				<a href="feature2.html">F2</a>
-				<a href="feature3.html">F3</a>
+				<a href="#" onclick="showVideoOnly()">VideoOnly</a>
+				<a href="#" onclick="showMagazine()">Magazine</a>
+				<a href="#" onclick="showOriginalContent()">Original</a>
+				<a href="#" onclick="showAll()">ALL</a>
 			  </div>
 			</div>
 			<a href="introduction.html">Intro</a>
@@ -90,18 +91,18 @@
 			<div class="section-group">
 				<!-- 第一排 -->
 				<div class="container">
-					<div class="left">
+					<div class="left" id="video-section">
 						<h2>Video Resources</h2>
 						<a class="link-button" href="https://tw.voicetube.com/" target="_blank">VoiceTube</a><br>
 						<a class="link-button" href="https://www.youtube.com/watch?v=5yjf1RvhflI&list=WL&index=1&pp=gAQBiAQB" target="_blank">常用1000句</a><br>
 						
 					</div>
-					<div class="center">
+					<div class="center" id="magazine-section">
 						<h2>Magazine</h2>
 						<a class="link-button" href="https://magazine.english4u.net/Magdata/menu/ljkng" target="_blank">No.305 3月 4U</a><br>
 						<a class="link-button" href="https://magazine.english4u.net/Magdata/menu/hb0gp" target="_blank">No.306 4月 4U</a><br>
 					</div>
-					<div class="right">
+					<div class="right" id="original-section">
 						<h2>Original Content</h2>
 						<a class="link-button" href="https://mangadex.org/" target="_blank">MangaDex</a><br>
 						<a class="link-button" href="https://witchculttranslation.com/" target="_blank">Witch Cult Translations</a><br>
@@ -122,5 +123,6 @@
 			<button id="colorBtn" class="bottom-button" onclick="location.href='login.html'">JP</button>
 		</div>
 		<script src="script.js"></script>
+		<script src="english-display-toggle.js"></script>
 	</body>
 </html>

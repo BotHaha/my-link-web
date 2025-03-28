@@ -40,13 +40,6 @@ function toggleLanguage() {
 window.addEventListener("load", function () {
   const zhBlock = document.querySelector('.lang-zh');
   if (zhBlock) zhBlock.classList.add('active');
-
-  const colorBtn = document.getElementById("colorBtn");
-  if (colorBtn) {
-    colorBtn.addEventListener("click", function () {
-      alert("你點到我了！");
-    });
-  }
 });
 
 // ✅ 點其他地方收起下拉選單

@@ -76,9 +76,10 @@
 			<div class="dropdown">
 			  <button class="dropbtn"  onclick="toggleMenu()">Function ▼</button>
 			  <div id="dropdown-content" class="dropdown-content">
-				<a href="feature1.html">F1</a>
-				<a href="feature2.html">F2</a>
-				<a href="feature3.html">F3</a>
+				<a href="#" onclick="showUK()">UK</a>
+				<a href="#" onclick="showUS()">US</a>
+				<a href="#" onclick="showJP()">JP</a>
+				<a href="#" onclick="showAll()">ALL</a>
 			  </div>
 			</div>
 			<a href="introduction.html">Intro</a>
@@ -88,16 +89,16 @@
 			<div class="section-group">
 				<!-- 第一排 -->
 				<div class="container">
-					<div class="left">
+					<div class="left" id="UK-section">
 						<h2>UK</h2>
 						<a class="link-button" href="https://www.bbc.com/news" target="_blank">BBC</a><br>
 					</div>
-					<div class="center">
+					<div class="center" id="US-section">
 						<h2>US</h2>
 						<a class="link-button" href="https://www.cnn.com/" target="_blank">CNN</a><br>
 						<a class="link-button" href="https://www.nytimes.com/" target="_blank">The New York Times</a><br>
 					</div>
-					<div class="right">
+					<div class="right" id="JP-section">
 						<h2>JP</h2>
 						<a class="link-button" href="https://www.asahi.com/ajw/" target="_blank">Asahi Shimbun</a><br>
 					</div>
@@ -113,6 +114,7 @@
 			<button id="colorBtn" class="bottom-button" onclick="location.href='login.html'">JP</button>
 		</div>
 		<script src="script.js"></script>
+		<script src="news-display-toggle.js"></script>
 	</body>
 </html>
 
