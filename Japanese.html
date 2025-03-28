@@ -22,28 +22,59 @@
 				border-radius: 5px;               
 
             }
-            .container {
+			.section-group {
+				margin: 40px 0;
+				padding: 0 20px;
+			}
+
+			.container {
 				display: flex;
-				height: 100vh; /* 滿版高度 */
+				justify-content: space-between;
+				padding: 40px;
+				gap: 30px; /* 👈 每欄之間的間距 */
+				box-sizing: border-box;
 			}
 
-			/* 各欄寬度比例，可自由調整 */
-			.left {
-				padding: 20px;
+			/* 各欄寬度（30%） */
+			.left, .center, .right {
+				width: 30%;
 				text-align: center;
-				width: 25%; /* 左邊 25% */
+				display: flex;
+				flex-direction: column;
+				align-items: center;
 			}
 
-			.center {
-				padding: 20px;
+			/* 區塊標題 */
+			.container h2 {
+				font-size: 24px;
+				font-weight: bold;
+				margin-bottom: 20px;
+				padding-bottom: 10px;
+				color: #222; /* 👈 深色標題 */
+				border-bottom: 3px solid #4CAF50;
+				width: 100%;
 				text-align: center;
-				width: 50%; /* 中間 50% */
 			}
 
-			.right {
-				padding: 20px;
-				text-align: center;
-				width: 25%; /* 右邊 25% */
+			/* 連結按鈕樣式 */
+			.link-button {
+				display: block;
+				width: 100%;
+				padding: 12px 20px;
+				margin: 1px 0;
+				background-color: #e0e0e0; /* 👈 淺色背景 */
+				color: #333;
+				text-decoration: none;
+				border-radius: 8px;
+				font-size: 16px;
+				font-weight: 500;
+				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+				transition: transform 0.2s, background-color 0.2s;
+			}
+
+			.link-button:hover {
+				background-color: #d5d5d5;
+				transform: scale(1.03);
 			}
 
             
@@ -66,25 +97,28 @@
 			<a href="introduction.html">Intro</a>
 			
 		</div>
+
         <div class="top-buttons">
             <button class="bottom-button" onclick="location.href='images/50.html'">50</button>
             <button class="bottom-button" onclick="location.href='images/another.html'">another</button>
         </div>
-
-        <div class="container">
-			<div class="left">
-                <h2>Game</h2>
-                <a class="link-button" href="https://wa.gwlin.com/wushiyin-exam" target="_blank">音打</a><br>
-                <a class="link-button" href="https://typing.twi1.me/game/79903" target="_blank">打文章</a><br>
-			</div>
-			<div class="center">
-                <h2></h2>
-			</div>
-			<div class="right">
-                <h2></h2>
+		<div class="body-background">		
+			<div class="section-group">
+				<div class="container">
+					<div class="left">
+						<h2>Game</h2>
+						<a class="link-button" href="https://wa.gwlin.com/wushiyin-exam" target="_blank">音打</a><br>
+						<a class="link-button" href="https://typing.twi1.me/game/79903" target="_blank">打文章</a><br>
+					</div>
+					<div class="center">
+						<h2>NON</h2>
+					</div>
+					<div class="right">
+						<h2>NON</h2>
+					</div>
+				</div>
 			</div>
 		</div>
-
 
 		<div class="footer-buttons">
             <button class="bottom-button" onclick="location.href='index.html'">Home</button>
