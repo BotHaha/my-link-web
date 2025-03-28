@@ -110,6 +110,9 @@ body {
     transition: all 0.2s ease;
 }
 
+.footer-spacer {
+    height: 200px; /* 可以依照 footer 高度調整 */
+  }
 .footer-buttons {
     position: fixed;
     display: flex;
