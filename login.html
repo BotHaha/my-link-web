@@ -12,35 +12,70 @@
             .frame {
                 display: flex;
                 flex-direction: column;
-                justify-content: center; /* 垂直置中 */
-                align-items: center;     /* 水平置中 */
-                height: 100vh;           /* 滿版高度 */
-                font-size: 24px;         /* 整體文字大小放大 */
+                justify-content: center;
+                align-items: center;
+                min-height: 80vh;
+                font-size: 24px;
+                padding: 40px 20px;
             }
+
             .password {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 width: 100%;
+                max-width: 400px;
+                background-color: #f9f9f9;
+                border-radius: 16px;
+                padding: 30px;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
                 margin-bottom: 20px;
             }
 
+            .password label {
+                font-size: 36px;
+                margin-bottom: 10px;
+                color: #333;
+            }
+
             .password input {
-                width: 300px;
-                height: 60px;
-                font-size: 24px;
+                width: 100%;
+                height: 50px;
+                font-size: 22px;
                 text-align: center;
-                border: 2px solid #888;
-                border-radius: 8px;
-                margin-top: 10px;
+                border: 2px solid #ccc;
+                border-radius: 10px;
+                transition: border-color 0.3s;
+            }
+
+            .password input:focus {
+                border-color: #4CAF50;
+                outline: none;
             }
 
             .submit {
-                width: 200px;
-                font-size: 28px;
-                padding: 15px 20px;
-                margin-top: 30px;
+                width: 240px;
+                font-size: 24px;
+                padding: 15px 25px;
+                margin-top: 20px;
                 cursor: pointer;
+                border: none;
+                border-radius: 10px;
+                background: linear-gradient(135deg, #4CAF50, #45a049);
+                color: white;
+                font-weight: bold;
+                box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+                transition: all 0.3s ease;
+            }
+
+            .submit:hover {
+                background: linear-gradient(135deg, #5ecf64, #4caf50);
+                transform: translateY(-3px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+            }
+
+            .submit:active {
+                transform: scale(0.98);
             }
             
             #error {
@@ -71,7 +106,7 @@
         <script>
             function checkPassword() {
                 const input = document.getElementById("password").value;
-                const correctPassword = "a31022617"; // 你可以改成你要的密碼
+                const correctPassword = "135246"; // 你可以改成你要的密碼
                 
                 if (input === correctPassword) {
                     window.location.href = "Japanese.html";
