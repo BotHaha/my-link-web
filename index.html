@@ -75,9 +75,15 @@
 			</div>
 			</div>
 			<a href="introduction.html">Intro</a>
+			<img src="images/handsome-guy.png" class="thumbnail" onclick="showOverlay()" />
 			
 		</div>
-
+		
+		<!-- 頭貼彈出 -->
+		<div id="imageOverlay" class="overlay" onclick="hideOverlay()">
+			<img src="images/handsome-guy.png" class="overlay-image" />
+		</div>
+		
 		<div class="body-background">
 			<div class="app-section">
 				<!-- 第一排 -->
@@ -148,7 +154,7 @@
 			<button class="bottom-button" onclick="location.href='English.html'">English</button>
 			<button class="bottom-button" onclick="location.href='login.html'">JP</button>
 		</div>
-		
+	<script src="head-sticker.js"></script>
 	<script src="script.js"></script>
 	</body>
 </html>
