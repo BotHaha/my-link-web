@@ -100,17 +100,17 @@ function showUK() {
     /*變更回原本網頁*/ 
     UK.innerHTML = `
         <h2>UK</h2>
-				<a class="link-button" href="https://www.bbc.com/news" target="_blank">BBC</a><br>
+				<a class="link-button" href="https://www.bbc.com/news" target="_blank">BBC</a><br><br>
     `;
 
     US.innerHTML = `
         <h2>US</h2>
 				<a class="link-button" href="https://www.cnn.com/" target="_blank">CNN</a><br>
-				<a class="link-button" href="https://www.nytimes.com/" target="_blank">The New York Times</a><br>
+				<a class="link-button" href="https://www.nytimes.com/" target="_blank">The New York Times</a>
     `;
 
     JP.innerHTML = `
         <h2>JP</h2>
-				<a class="link-button" href="https://www.asahi.com/ajw/" target="_blank">Asahi Shimbun</a><br>
+				<a class="link-button" href="https://www.asahi.com/ajw/" target="_blank">Asahi Shimbun</a><br><br>
     `;
 }
